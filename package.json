@@ -12,7 +12,8 @@
     "preview": "next build && next start",
     "typecheck": "tsc --noEmit",
     "format:write": "prettier --write \"**/*.{ts,tsx,mdx}\" --cache",
-    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache"
+    "format:check": "prettier --check \"**/*.{ts,tsx,mdx}\" --cache",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",
@@ -53,7 +54,7 @@
   },
   "lint-staged": {
     "*.{ts,tsx}": [
-      "next lint --fix",
+      "eslint --fix",
       "prettier --write",
       "git add"
     ],
