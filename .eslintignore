@@ -5,3 +5,5 @@ node_modules
 *.esm.js
 next-env.d.ts
 *.js
+.env
+.env.*
