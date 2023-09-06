@@ -30,6 +30,7 @@ interface RootLayoutProps {
   children: React.ReactNode;
 }
 
+const x = 'hi';
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
