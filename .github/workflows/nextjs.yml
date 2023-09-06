@@ -39,7 +39,7 @@ jobs:
               echo "manager=yarn"
               echo "command=install"
               echo "runner=yarn"
-            } >> "$GITHUB_OUTPUT"
+            } >> $GITHUB_OUTPUT
           elif [ -f "${{ github.workspace }}/package.json" ]; then
             {
               echo "manager=npm"
