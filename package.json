@@ -68,5 +68,8 @@
     "hooks": {
       "pre-commit": "lint-staged"
     }
+  },
+  "ts-standard": {
+    "project": "./tsconfig.json"
   }
 }
