@@ -8,6 +8,7 @@ import { TailwindIndicator } from '@/components/tailwind-indicator';
 import { ThemeProvider } from '@/components/theme-provider';
 import React from 'react';
 import Head from 'next/head';
+import { ApolloWrapper } from '@/lib/apolloClientWrapper';
 
 export const metadata: Metadata = {
   title: {
@@ -29,29 +30,30 @@ export const metadata: Metadata = {
 interface RootLayoutProps {
   children: React.ReactNode;
 }
-
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <>
-      <html lang="en" suppressHydrationWarning>
-        <Head>
-          <title>Circle</title>
-        </Head>
-        <body
-          className={cn(
-            'min-h-screen bg-background font-sans antialiased',
-            fontSans.variable,
-          )}
-        >
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-            <div className="relative flex min-h-screen flex-col">
-              <SiteHeader />
-              <div className="flex-1">{children}</div>
-            </div>
-            <TailwindIndicator />
-          </ThemeProvider>
-        </body>
-      </html>
+      <ApolloWrapper>
+        <html lang="en" suppressHydrationWarning>
+          <Head>
+            <title>Circle</title>
+          </Head>
+          <body
+            className={cn(
+              'min-h-screen bg-background font-sans antialiased',
+              fontSans.variable,
+            )}
+          >
+            <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+              <div className="relative flex min-h-screen flex-col">
+                <SiteHeader />
+                <div className="flex-1">{children}</div>
+              </div>
+              <TailwindIndicator />
+            </ThemeProvider>
+          </body>
+        </html>
+      </ApolloWrapper>
     </>
   );
 }

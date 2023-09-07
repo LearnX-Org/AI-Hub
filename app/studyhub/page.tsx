@@ -1,7 +1,5 @@
 import React from 'react';
 
-function CougarChegg() {
+export default function CougarChegg() {
   return <div>Chegg page</div>;
 }
-
-export default CougarChegg;
