@@ -32,9 +32,4 @@ jobs:
           VALIDATE_ALL_CODEBASE: false
           DEFAULT_BRANCH: 'main'
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          DISABLE_LINTERS: 'ALL' # Disable all linters by default
-          VALIDATE_YAML: true # Enable YAML linting
-          VALIDATE_JSON: true # Enable JSON linting
-          VALIDATE_TYPESCRIPT_ES: true # Enable ESLint for TypeScript
-          VALIDATE_JAVASCRIPT_ES: true # Enable ESLint for JavaScript (in case you have .js files)
-
+          DISABLE_LINTERS: 'TS_STANDARD' # This disables ts-standard
