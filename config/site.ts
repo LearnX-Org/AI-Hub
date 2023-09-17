@@ -10,8 +10,8 @@ export const siteConfig = {
       href: '/',
     },
     {
-      title: 'Studyhub',
-      href: '/studyhub',
+      title: 'CircleChegg',
+      href: '/circlechegg',
     },
   ],
   links: {
